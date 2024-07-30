@@ -1,18 +1,22 @@
-"use client"
+"use client";
 import { useState } from "react";
 import Image from "next/image";
 import { FaHandsHelping } from "react-icons/fa";
+import Carrusel from "@/componets/carrusel";
 
 export default function Home() {
   const [activeContent, setActiveContent] = useState('default');
 
   const renderContent = () => {
     switch (activeContent) {
-      case 'programa':
+      default:
         return (
           <div className="w-full h-full flex items-center">
-            <div className="w-[50%] flex flex-col gap-8 px-40">
-              <p>Contenido del programa</p>
+            <div className="w-[50%] flex flex-col gap-8 px-24">
+              <p>El primer paso lo das con tu pasión y conocimiento. Después, solo tienes que escoger un tema prometedor con la ayuda de nuestra herramienta Marketplace Insights.</p>
+              <p>Tú decides la forma de enseñar, cómo le vas a poner tu sello propio.</p>
+              <h3 className="font-bold">¿Cómo podemos ayudarte?</h3>
+              <p>Ofrecemos numerosos recursos con información para crear tu primer curso. Y nuestro panel del instructor y las páginas del programa de curso te ayudarán a mantenerlo todo organizado.</p>
             </div>
             <div className="w-[50%]">
               <img src="/img/udemy.jpg" alt="" className="w-full h-full" />
@@ -22,8 +26,11 @@ export default function Home() {
       case 'video':
         return (
           <div className="w-full h-full flex items-center">
-            <div className="w-[50%] flex flex-col gap-8 px-40">
-              <p>Contenido del video</p>
+            <div className="w-[50%] flex flex-col gap-8 px-24">
+              <p>Utilice herramientas básicas como un teléfono inteligente o una cámara DSLR. Añade un buen micrófono y estarás listo para empezar.</p>
+              <p>Si no te gusta estar frente a la cámara, simplemente captura tu pantalla. De cualquier manera, recomendamos dos horas o más de video para un curso pago.</p>
+              <h3 className="font-bold">¿Cómo te ayudamos?</h3>
+              <p>Nuestro equipo de soporte está disponible para ayudarlo durante todo el proceso y proporcionar comentarios sobre los videos de prueba.</p>
             </div>
             <div className="w-[50%]">
               <img src="/img/udemy.jpg" alt="" className="w-full h-full" />
@@ -33,22 +40,11 @@ export default function Home() {
       case 'curso':
         return (
           <div className="w-full h-full flex items-center">
-            <div className="w-[50%] flex flex-col gap-8 px-40">
-              <p>Contenido del curso</p>
-            </div>
-            <div className="w-[50%]">
-              <img src="/img/udemy.jpg" alt="" className="w-full h-full" />
-            </div>
-          </div>
-        );
-      default:
-        return (
-          <div className="w-full h-full flex items-center">
-            <div className="w-[50%] flex flex-col gap-8 px-40">
-              <p>El primer paso lo das con tu pasión y conocimiento. Después, solo tienes que escoger un tema prometedor con la ayuda de nuestra herramienta Marketplace Insights.</p>
-              <p>Tú decides la forma de enseñar, cómo le vas a poner tu sello propio.</p>
-              <h3>¿Cómo podemos ayudarte?</h3>
-              <p>Ofrecemos numerosos recursos con información para crear tu primer curso. Y nuestro panel del instructor y las páginas del programa de curso te ayudarán a mantenerlo todo organizado.</p>
+            <div className="w-[50%] flex flex-col gap-8 px-24">
+              <p>Recopila tus primeras valoraciones y reseñas promocionando tu curso a través de las redes sociales y tus redes profesionales.</p>
+              <p>Tu curso se podrá encontrar en nuestro mercado, donde obtendrás ingresos de cada inscripción pagada.</p>
+              <h3 className="font-bold">¿Cómo te ayudamos?</h3>
+              <p>Nuestra herramienta de cupones personalizados le permite ofrecer incentivos de inscripción mientras que nuestras promociones globales dirigen el tráfico a los cursos. Hay aún más oportunidades para los cursos elegidos para Udemy Business.</p>
             </div>
             <div className="w-[50%]">
               <img src="/img/udemy.jpg" alt="" className="w-full h-full" />
@@ -59,7 +55,7 @@ export default function Home() {
   };
 
   return (
-    <main className="bg-[#F8F8F8] relative flex  min-h-screen flex-col items-center gap-[5rem] ">
+    <main className="bg-[#dad9d9] relative flex  min-h-screen flex-col items-center gap-[5rem] ">
       <div className="relative w-full h-full">
         <div className="h-[35rem] ">
           <img
@@ -113,13 +109,33 @@ export default function Home() {
         </div>
       </div>
 
+
+      <div  className=" w-[90%] flex flex-col justify-center items-center gap-8"> 
+        <Carrusel/>
+      </div>
+
       <div className="w-[70%] flex flex-col justify-center items-center gap-8">
         <div><h1 className="text-center font-bold text-3xl">cómo empezar</h1></div>
         <div className="flex flex-col gap-10">
-          <div className="flex gap-6 justify-center">
-            <button onClick={() => setActiveContent('programa')}>crea tu programa</button>
-            <button onClick={() => setActiveContent('video')}>graba tu video</button>
-            <button onClick={() => setActiveContent('curso')}>publica tu curso</button>
+          <div className="flex gap-6 justify-center border-b">
+            <button
+              onClick={() => setActiveContent('programa')}
+              className={`p-4 ${activeContent === 'programa' ? 'font-bold text-black border-b-2 border-black' : 'text-gray-600'} hover:text-black`}
+            >
+              Planifica tu currículo
+            </button>
+            <button
+              onClick={() => setActiveContent('video')}
+              className={`p-4 ${activeContent === 'video' ? 'font-bold text-black border-b-2 border-black' : 'text-gray-600'} hover:text-black`}
+            >
+              Graba tu video
+            </button>
+            <button
+              onClick={() => setActiveContent('curso')}
+              className={`p-4 ${activeContent === 'curso' ? 'font-bold text-black border-b-2 border-black' : 'text-gray-600'} hover:text-black`}
+            >
+              Lanza tu curso
+            </button>
           </div>
           {renderContent()}
         </div>

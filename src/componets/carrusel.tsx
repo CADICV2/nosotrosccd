@@ -11,6 +11,7 @@ const MyCarousel: React.FC = () => {
         wrapAround: true,
         autoPlay: 3000,
         pageDots: true,
+        cellAlign: 'left',
       });
 
       // Limpieza al desmontar el componente
@@ -19,49 +20,47 @@ const MyCarousel: React.FC = () => {
   }, []);
 
   return (
-    <div ref={carouselRef} className="carousel">
+    <div ref={carouselRef} className="carousel px-4">
       <div className="carousel-cell p-4">
-        <div className="bg-white shadow-md rounded-lg overflow-hidden">
-          <img className="w-full h-48 object-cover" src="/img/inicio.jpg" alt="Image 1" />
-          <div className="p-4">
-            <h3 className="text-lg font-semibold">Título 1</h3>
-            <p className="text-gray-600">Descripción de la tarjeta 1.</p>
+        <div className="bg-white shadow-md rounded-lg overflow-hidden h-full">
+          <img className="w-full h-64 object-cover" src="/img/inicio.jpg" alt="Image 1" />
+          <div className="p-4 bg-gradient-to-b from-transparent to-black text-center">
+            <h3 className="text-lg font-semibold text-white">Sistemas administrativos del Estado: SIGA, SIAF, SEACE</h3>
+            <p className="text-gray-300">Diplomado especializado</p>
+            <button className="mt-4 bg-blue-500 text-white px-4 py-2 rounded">VER PROGRAMA</button>
+          </div>
+        </div>
+      </div>
+
+      <div className="carousel-cell p-4">
+        <div className="bg-white shadow-md rounded-lg overflow-hidden h-full">
+          <img className="w-full h-64 object-cover" src="/img/inicio.jpg" alt="Image 2" />
+          <div className="p-4 bg-gradient-to-b from-transparent to-black text-center">
+            <h3 className="text-lg font-semibold text-white">Sistema nacional de programación multianual y gestión de inversiones Invierte.pe</h3>
+            <p className="text-gray-300">Diplomado especializado</p>
+            <button className="mt-4 bg-blue-500 text-white px-4 py-2 rounded">VER PROGRAMA</button>
           </div>
         </div>
       </div>
       <div className="carousel-cell p-4">
-        <div className="bg-white shadow-md rounded-lg overflow-hidden">
-          <img className="w-full h-48 object-cover" src="/img/inicio.jpg" alt="Image 2" />
-          <div className="p-4">
-            <h3 className="text-lg font-semibold">Título 2</h3>
-            <p className="text-gray-600">Descripción de la tarjeta 2.</p>
+        <div className="bg-white shadow-md rounded-lg overflow-hidden h-full">
+          <img className="w-full h-64 object-cover" src="/img/inicio.jpg" alt="Image 2" />
+          <div className="p-4 bg-gradient-to-b from-transparent to-black text-center">
+            <h3 className="text-lg font-semibold text-white">Sistema nacional de programación multianual y gestión de inversiones Invierte.pe</h3>
+            <p className="text-gray-300">Diplomado especializado</p>
+            <button className="mt-4 bg-blue-500 text-white px-4 py-2 rounded">VER PROGRAMA</button>
           </div>
         </div>
       </div>
-      <div className="carousel-cell p-4">
-        <div className="bg-white shadow-md rounded-lg overflow-hidden">
-          <img className="w-full h-48 object-cover" src="/img/inicio.jpg" alt="Image 3" />
-          <div className="p-4">
-            <h3 className="text-lg font-semibold">Título 3</h3>
-            <p className="text-gray-600">Descripción de la tarjeta 3.</p>
-          </div>
-        </div>
-      </div>
-      <div className="carousel-cell p-4">
-        <div className="bg-white shadow-md rounded-lg overflow-hidden">
-          <img className="w-full h-48 object-cover" src="/img/inicio.jpg" alt="Image 4" />
-          <div className="p-4">
-            <h3 className="text-lg font-semibold">Título 4</h3>
-            <p className="text-gray-600">Descripción de la tarjeta 4.</p>
-          </div>
-        </div>
-      </div>
-      <div className="carousel-cell p-4">
-        <div className="bg-white shadow-md rounded-lg overflow-hidden">
-          <img className="w-full h-48 object-cover" src="/img/inicio.jpg" alt="Image 5" />
-          <div className="p-4">
-            <h3 className="text-lg font-semibold">Título 5</h3>
-            <p className="text-gray-600">Descripción de la tarjeta 5.</p>
+
+
+     <div className="carousel-cell p-4">
+        <div className="bg-white shadow-md rounded-lg overflow-hidden h-full">
+          <img className="w-full h-64 object-cover" src="/img/inicio.jpg" alt="Image 2" />
+          <div className="p-4 bg-gradient-to-b from-transparent to-black text-center">
+            <h3 className="text-lg font-semibold text-white">Sistema nacional de programación multianual y gestión de inversiones Invierte.pe</h3>
+            <p className="text-gray-300">Diplomado especializado</p>
+            <button className="mt-4 bg-blue-500 text-white px-4 py-2 rounded">VER PROGRAMA</button>
           </div>
         </div>
       </div>

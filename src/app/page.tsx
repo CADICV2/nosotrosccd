@@ -1,11 +1,18 @@
 "use client";
+import dynamic from 'next/dynamic';
+import React from 'react';
+
 import { useState } from "react";
 import Image from "next/image";
 import { FaHandsHelping } from "react-icons/fa";
-import Carrusel from "@/componets/carrusel";
+
 
 export default function Home() {
   const [activeContent, setActiveContent] = useState('default');
+  const Carrusel = dynamic(() => import('@/componets/carrusel'), {
+    ssr: false,
+  });
+  
 
   const renderContent = () => {
     switch (activeContent) {
@@ -85,7 +92,7 @@ export default function Home() {
 
       <div className=" w-[60%] flex flex-col justify-center items-center gap-8">
         <div className="flex flex-col gap-8">
-          <h1 className="text-center">Tu carrera profesional hacia el futuro</h1>
+          <h1 className="text-center font-bold text-3xl">Tu carrera profesional hacia el futuro</h1>
           <p className="text-center">Somos una compañía multienergética presente en más de 20 países que se apoya en la innovación tecnológica y la digitalización para crear un futuro más sostenible y que trabaja para contribuir al progreso de la sociedad. Únete a un proyecto de
             impacto global y deja tu huella en el reto de la
             energía sostenible.</p>
@@ -110,7 +117,7 @@ export default function Home() {
       </div>
 
 
-      <div  className=" w-[90%] flex flex-col justify-center items-center gap-8"> 
+      <div  className=" w-[90%]  flex justify-center items-center"> 
         <Carrusel/>
       </div>
 

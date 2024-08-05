@@ -1,0 +1,233 @@
+ <section className="w-full h-full bg-[#dad9d9]  py-16">
+        <div className="w-[80%] mx-auto flex flex-col items-center">
+          <div className="flex w-full flex-col">
+            <div className='mx-10 py-[5rem] ' data-aos="flip-left">
+              <div className='w-full'>
+                <div className='grid grid-cols-4 gap-10'>
+                  <div className='col-span-4'>
+                    <div className='flex gap-2 items-center justify-center'>
+                      <Image
+                        src="/img/ccdlogo.png"
+                        alt="CCD Logo"
+                        className='animate-bounce animate-infinite'
+                        width={100}
+                        height={0}
+                      />
+                      <span className='font-bold text-center text-5xl'>ACREDITACIONES ESTABLECIDAS</span>
+
+                    </div>
+                  </div>
+                  <div className='flex items-center justify-center p-2 ' data-aos="flip-left">
+                    <div className='group relative w-64 h-96 [perspective:1000px]'>
+                      <div className='absolute inset-0 bg-gray-600/40 rounded-3xl p-8 transition-transform duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]'>
+                        {/* Front Side */}
+                        <div className='absolute inset-0 flex flex-col p-4 items-center justify-center backface-hidden'>
+                          <Image
+                            alt='colegio de ingenieros del callao'
+                            src='/img/abogado.png'
+                            width={300}
+                            height={0}
+                            className='h-full w-full rounded-t-xl  bg-gray-300 p-2'
+                          />
+                          <div className='py-4 px-4 bg-yellow-600/20 rounded-b-lg text-center'>
+                            <span className=' font-bold '>colegio de abogados de lima</span>
+                          </div>
+                        </div>
+                        {/* Back Side */}
+                        <div className='absolute inset-0 flex flex-col items-center gap-4 justify-center p-6 bg-blue-500 text-white [transform:rotateY(180deg)] backface-hidden rounded-3xl'>
+
+                          <Image
+                            alt='colegio de ingenieros del callao'
+                            src='/img/ccdlogo.png'
+                            width={300}
+                            height={0}
+                            className='w-20 h-20 rounded-full  bg-gray-300 p-2'
+                          />
+                          <p className='mt-2 text-sm text-center'>
+                            <b>CCD</b> prioriza la confianza de nuestros socios y clientes. Contamos con documentos que acreditan nuestra confiabilidad.
+                          </p>
+
+                          <Modal2 btnName={<div className='flex gap-2 items-center'><GrDocumentPdf className='h-6 w-6 text-red-700' /><h1>Mas informacion</h1></div>}
+                            tHeader='colegio de abogados de lima'
+                            Pcenter={<span></span>}
+                            btndow={<Button color="success" variant="light" as="a" href="/doc/pdf/CONVENIO  CAL LIMA 2021.pdf" download>
+                              Descargar PDF
+                            </Button>}
+                            doc={<iframe
+                              src="/doc/pdf/CONVENIO  CAL LIMA 2021.pdf"
+                              width="100%"
+                              height="500px"
+                              style={{ border: "none" }}
+                              title="PDF Document"
+
+                            />}
+                            content={<span></span>}
+
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className='flex items-center justify-center p-2 ' data-aos="flip-left">
+                    <div className='group relative w-64 h-96 [perspective:1000px]'>
+                      <div className='absolute inset-0 bg-gray-600/40 rounded-3xl p-8 transition-transform duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]'>
+                        {/* Front Side */}
+                        <div className='absolute inset-0 flex flex-col p-4 items-center justify-center backface-hidden'>
+                          <Image
+                            alt='colegio de ingenieros del callao'
+                            src='/img/ing.png'
+                            width={300}
+                            height={0}
+                            className='h-full w-full rounded-t-xl  bg-gray-300 p-2'
+                          />
+                          <div className='py-4 px-4 bg-yellow-600/20 rounded-xl text-center'>
+                            <span className=' font-bold '>colegio de ingenieros del callao</span>
+                          </div>
+                        </div>
+                        {/* Back Side */}
+                        <div className='absolute inset-0 flex flex-col items-center gap-4 justify-center p-6 bg-blue-500 text-white [transform:rotateY(180deg)] backface-hidden rounded-3xl'>
+                          <Image
+                            alt='colegio de ingenieros del callao'
+                            src='/img/ccdlogo.png'
+                            width={300}
+                            height={0}
+                            className='w-20 h-20 rounded-full  bg-gray-300 p-2'
+                          />
+                          <p className='mt-2 text-sm text-center'>
+                            <b>CCD</b> prioriza la confianza de nuestros socios y clientes. Contamos con documentos que acreditan nuestra confiabilidad.
+                          </p>
+
+                          <Modal2 btnName={<div className='flex gap-2 items-center'><GrDocumentPdf className='h-6 w-6 text-red-700' /><h1>Mas informacion</h1></div>}
+                            tHeader='colegio de ingenieros del callao'
+                            Pcenter={<span></span>}
+                            btndow={<Button color="success" variant="light" as="a" href="/doc/pdf/CONVENIO CENTRO DE CAPACITACIÓN Y DESARROLLO S.A.C..pdf" download>
+                              Descargar PDF
+                            </Button>}
+                            doc={<iframe
+                              src="/doc/pdf/CONVENIO CENTRO DE CAPACITACIÓN Y DESARROLLO S.A.C..pdf"
+                              width="100%"
+                              height="500px"
+                              style={{ border: "none" }}
+                              title="PDF Document"
+                            />}
+                            content={<span></span>}
+
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className='flex items-center justify-center p-2 ' data-aos="flip-left">
+                    <div className='group relative w-64 h-96 [perspective:1000px]'>
+                      <div className='absolute inset-0 bg-gray-600/40 rounded-3xl p-8 transition-transform duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]'>
+                        {/* Front Side */}
+                        <div className='absolute inset-0 flex flex-col p-4 items-center justify-center backface-hidden'>
+                          <Image
+                            alt='colegio de economistas de lima'
+                            src='/img/ecolima.png'
+                            width={300}
+                            height={0}
+                            className='h-full w-full rounded-t-xl  bg-gray-300 p-2 '
+                          />
+                          <div className='py-4 px-4 bg-yellow-600/20 rounded-xl text-center'>
+                            <span className=' font-bold '>colegio de economistas de lima</span>
+                          </div>
+                        </div>
+                        {/* Back Side */}
+                        <div className='absolute inset-0 flex flex-col items-center  gap-4 justify-center p-6 bg-blue-500 text-white [transform:rotateY(180deg)] backface-hidden rounded-3xl'>
+                          <Image
+                            alt='colegio de ingenieros del callao'
+                            src='/img/ccdlogo.png'
+                            width={300}
+                            height={0}
+                            className='w-20 h-20 rounded-full  bg-gray-300 p-2'
+                          />
+                          <p className='mt-2 text-sm text-center'>
+                            <b>CCD</b> prioriza la confianza de nuestros socios y clientes. Contamos con documentos que acreditan nuestra confiabilidad.
+                          </p>
+
+                          <Modal2 btnName={<div className='flex gap-2 items-center'><GrDocumentPdf className='h-6 w-6 text-red-700' /><h1>Mas informacion</h1></div>}
+                            tHeader='colegio de economistas de lima'
+                            Pcenter={<span></span>}
+                            btndow={<Button color="success" variant="light" as="a" href="/doc/pdf/13-CONVENIO ENTRE EL CEL Y CCD.pdf" download>
+                              Descargar PDF
+                            </Button>}
+                            doc={<iframe
+                              src="/doc/pdf/13-CONVENIO ENTRE EL CEL Y CCD.pdf"
+                              width="100%"
+                              height="500px"
+                              style={{ border: "none" }}
+                              title="PDF Document"
+                            />}
+                            content={<span></span>}
+
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className='flex items-center justify-center p-2 ' data-aos="flip-left">
+                    <div className='group relative w-64 h-96 [perspective:1000px]'>
+                      <div className='absolute inset-0 bg-gray-600/40 rounded-3xl p-8 transition-transform duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]'>
+                        {/* Front Side */}
+                        <div className='absolute inset-0 flex flex-col  p-4 items-center justify-center backface-hidden'>
+                          <Image
+                            alt='piura'
+                            src='/img/piura.png'
+                            width={300}
+                            height={0}
+                            className='h-full w-full rounded-t-xl  bg-gray-300 p-2'
+                          />
+                          <div className='py-4 px-4 bg-yellow-600/20 rounded-xl text-center'>
+                            <span className=' font-bold '>colegio de economistas de piura</span>
+                          </div>
+                        </div>
+                        {/* Back Side */}
+                        <div className='absolute inset-0 flex flex-col items-center gap-4 justify-center p-6 bg-blue-500 text-white [transform:rotateY(180deg)] backface-hidden rounded-3xl'>
+                          <Image
+                            alt='colegio de ingenieros del callao'
+                            src='/img/ccdlogo.png'
+                            width={300}
+                            height={0}
+                            className='w-20 h-20 rounded-full  bg-gray-300 p-2'
+                          />
+                          <p className='mt-2 text-sm text-center'>
+                            <b>CCD</b> prioriza la confianza de nuestros socios y clientes. Contamos con documentos que acreditan nuestra confiabilidad.
+                          </p>
+
+                          <Modal2 btnName={<div className='flex gap-2 items-center'><GrDocumentPdf className='h-6 w-6 text-red-700' /><h1>Mas informacion</h1></div>}
+                            tHeader='colegio de economistas de piura'
+                            Pcenter={<span></span>}
+                            btndow={<Button color="success" variant="light" as="a" href="/doc/pdf/CONVENIO CEP -PIURA 2023.pdf" download>
+                              Descargar PDF
+                            </Button>}
+                            doc={<iframe
+                              src="/doc/pdf/CONVENIO CEP -PIURA 2023.pdf"
+                              width="100%"
+                              height="500px"
+                              style={{ border: "none" }}
+                              title="PDF Document"
+                            />}
+                            content={<span></span>}
+
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+
+
+
+                  {/* Repite el bloque de arriba para más tarjetas */}
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>

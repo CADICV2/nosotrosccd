@@ -21,6 +21,8 @@ export default function Home() {
       duration: 1000, // Duración de las animaciones
       once: true, // Si la animación se ejecuta solo una vez
       mirror: false, // Si las animaciones se deben volver a ejecutar al hacer scroll hacia arriba
+      // delay: 500,
+      // startEvent: 'load'  
     });
   }, []);
   const [activeContent, setActiveContent] = useState('default');
@@ -60,7 +62,19 @@ export default function Home() {
 
             <p className='pr-10'>En <b>CCD</b>, ofrecemos cursos en línea de alta calidad impartidos por un equipo de expertos dedicados y apasionados por la educación. Nuestro personal está compuesto por profesionales líderes en sus campos, comprometidos a proporcionar una experiencia de aprendizaje accesible y transformadora para estudiantes de todo el mundo. Utilizamos tecnología avanzada y métodos innovadores para asegurar que cada curso sea relevante, atractivo y efectivo.</p>
           </div>
-          <div className="w-full grid grid-cols-2 gap-6 lg:w-[50%]" data-aos="fade-left">
+          
+          <div className="w-full lg:w-[50%]"  data-aos="fade-left">
+              <video 
+              src="/video/cddnosotros.mp4"
+              autoPlay
+              loop
+              muted
+              className=' rounded-2xl'
+              />
+
+          </div>
+
+          {/* <div className="w-full grid grid-cols-2 gap-6 lg:w-[50%]" data-aos="fade-left">
             <div className='grid grid-cols-2 gap-2'>
               <div className='col-span-2'>
                 <Image
@@ -120,7 +134,8 @@ export default function Home() {
                 />
               </div>
             </div>
-          </div>
+          </div> */}
+
         </div>
       </section>
 
